@@ -1,5 +1,9 @@
 const express = require('express');
 const app = express();
+const http = require('http').Server(app);
+const server = require('./lib/chatServer');
+
+server.listen(http);
 
 app.use(express.static('public'));
 
