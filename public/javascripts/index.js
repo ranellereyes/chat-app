@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const io = require('socket.io-client');
+  const socket = require('socket.io-client')();
+  const ChatUI = require('./chatUI');
 
-  console.log(io);
+  const GUI = new ChatUI(socket);
+  window.g = GUI;
 });
