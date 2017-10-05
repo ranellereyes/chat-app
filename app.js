@@ -3,6 +3,8 @@ const app = express();
 const http = require('http').Server(app);
 const server = require('./lib/chatServer');
 
+console.log(http)
+
 server.listen(http);
 
 app.use(express.static('public'));
