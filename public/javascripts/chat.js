@@ -16,4 +16,9 @@ class Chat(socket) {
   }
 }
 
-module.export = Chat;
+Chat.prototype.sendMessage = function(message) {
+  console.log(message);
+  this.socket.emit('message', { message });
+};
+
+module.exports = Chat;

@@ -3,5 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const ChatUI = require('./chatUI');
   const chat = new ChatUI(socket);
 
-  console.log(io);
+  const GUI = new ChatUI(socket);
+  window.g = GUI;
 });
